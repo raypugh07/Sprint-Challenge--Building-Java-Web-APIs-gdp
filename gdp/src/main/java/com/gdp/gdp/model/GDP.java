@@ -22,7 +22,8 @@ public class GDP {
         this.id = counter.incrementAndGet();
         this.name = name;
         this.gdp = gdp;
-       // this.number=number;
+        this.number=Long.parseLong(gdp);
+       // long number = Long.parseLong(gdp);
         //this.gDp=gDp;
 
         logger.info("We created a country");
@@ -39,16 +40,18 @@ public class GDP {
         this.id = toClone.getId();
         this.name = toClone.getName();
         this.gdp = toClone.gdp;
-        //this.number=toClone.number;
+        this.number=toClone.number;
         //this.gDp=toClone.gDp;
 
     }
 
     public long getNumber() {
+
         return number;
     }
 
     public void setNumber(long number) {
+
         this.number = number;
     }
 
@@ -85,7 +88,8 @@ public class GDP {
         return "GDP{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", gdp=" + gdp +
+                ", gdp='" + gdp + '\'' +
+                ", number=" + number +
                 '}';
     }
 }

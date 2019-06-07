@@ -24,7 +24,7 @@ public class CountryController {
 
     private static final Logger logger = LoggerFactory.getLogger(CountryController.class);
 
-
+    @Autowired
 
 
     // localhost:2019/data/countries
