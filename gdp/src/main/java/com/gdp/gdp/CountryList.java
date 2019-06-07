@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class CountryList {
 
-  public ArrayList<GDP> countryList=new ArrayList<>();
+  public ArrayList<GDP> countryList=new ArrayList<GDP>();
 
     public CountryList(){
 
@@ -131,17 +131,17 @@ public class CountryList {
 
     public ArrayList<GDP> findCountries(CheckGDP tester)
     {
-        ArrayList<GDP> tempDogList = new ArrayList<>();
+        ArrayList<GDP> tempCountryList = new ArrayList<>();
 
         for (GDP d : countryList)
         {
             if (tester.test(d))
             {
-                tempDogList.add(d);
+                tempCountryList.add(d);
             }
         }
 
-        return tempDogList;
+        return tempCountryList;
     }
 
 

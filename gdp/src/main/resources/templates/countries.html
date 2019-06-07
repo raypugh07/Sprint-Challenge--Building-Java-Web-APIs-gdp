@@ -1,18 +1,18 @@
 <html xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <title>Display Dog Details</title>
+    <title>Display Country Details</title>
 </head>
 <body>
 <table border="1">
     <tr>
-        <th>Breed</th>
-        <th>Weight</th>
-        <th>Apartment Suitable</th>
+        <th>Country</th>
+        <th>GDP</th>
+
     </tr>
-    <tr th:each="country : ${countryList}">
-        <td th:text="${country.name}">Breed</td>
-        <td th:text="${country.gdp}">Weight</td>
+    <tr th:each="country? : ${countryList}">
+        <td th:text="${country?.name}">Country</td>
+        <td th:text="${country?.gdp}">GDP</td>
 
     </tr>
 </table>

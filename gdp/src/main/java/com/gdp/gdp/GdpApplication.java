@@ -2,6 +2,8 @@ package com.gdp.gdp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @EnableWebMvc
@@ -15,7 +17,10 @@ public class GdpApplication {
 
         myCountryList = new CountryList();
 
-        SpringApplication.run(GdpApplication.class, args);
+        ApplicationContext ctx=  SpringApplication.run(GdpApplication.class, args);
+
+        DispatcherServlet dispatcherServlet=(DispatcherServlet)ctx.getBean("dispatcherServlet") ;
+        dispatcherServlet.setThrowExceptionIfNoHandlerFound(true);
     }
 
 }
